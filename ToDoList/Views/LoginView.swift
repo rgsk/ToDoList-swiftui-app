@@ -27,9 +27,13 @@ struct LoginView: View {
                     SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
-                  
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(.red)
+                    }
+                    
                     TLButton(label: "Log In", background: Color.blue) {
-                        print("changed")
+                        viewModel.login()
                     }
                 }
                 

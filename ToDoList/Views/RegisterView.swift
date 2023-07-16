@@ -17,7 +17,7 @@ struct RegisterView: View {
             
             
             Form {
-                TextField("Full Name", text: $viewModel.fullName)
+                TextField("Full Name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
                 
@@ -29,9 +29,13 @@ struct RegisterView: View {
                 SecureField("Password", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                 
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundColor(.red)
+                }
                 
                 TLButton(label: "Create Account", background: Color.green) {
-                    print("changed")
+                    viewModel.register()
                 }
             }
             .offset(y:-40)

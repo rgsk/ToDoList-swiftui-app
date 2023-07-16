@@ -30,6 +30,8 @@
 		D576CFCE2A646197002BCB44 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFCD2A646197002BCB44 /* LoginViewModel.swift */; };
 		D576CFD02A6461AF002BCB44 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFCF2A6461AF002BCB44 /* RegisterViewModel.swift */; };
 		D576CFD22A6461B9002BCB44 /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFD12A6461B9002BCB44 /* ToDoListItemViewModel.swift */; };
+		D576CFD72A646490002BCB44 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFD62A646490002BCB44 /* Header.swift */; };
+		D576CFD92A647384002BCB44 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFD82A647384002BCB44 /* TLButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		D576CFCD2A646197002BCB44 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D576CFCF2A6461AF002BCB44 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D576CFD12A6461B9002BCB44 /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
+		D576CFD62A646490002BCB44 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		D576CFD82A647384002BCB44 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		D576CF972A645BAC002BCB44 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				D576CFDA2A6473A3002BCB44 /* Components */,
 				D576CFB42A645F91002BCB44 /* Other */,
 				D576CFB32A645F89002BCB44 /* Models */,
 				D576CFB22A645F6C002BCB44 /* ViewModels */,
@@ -111,11 +116,11 @@
 		D576CFB12A645F61002BCB44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D576CFBB2A64609C002BCB44 /* LoginView.swift */,
 				D576CF9A2A645BAC002BCB44 /* MainView.swift */,
 				D576CFB52A64607D002BCB44 /* ProfileView.swift */,
 				D576CFB72A646089002BCB44 /* ToDoListView.swift */,
 				D576CFB92A646093002BCB44 /* CreateItemView.swift */,
-				D576CFBB2A64609C002BCB44 /* LoginView.swift */,
 				D576CFBD2A6460A8002BCB44 /* RegisterView.swift */,
 				D576CFBF2A6460D7002BCB44 /* ToDoListItemView.swift */,
 			);
@@ -153,6 +158,15 @@
 				D576CF982A645BAC002BCB44 /* ToDoListApp.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		D576CFDA2A6473A3002BCB44 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D576CFD62A646490002BCB44 /* Header.swift */,
+				D576CFD82A647384002BCB44 /* TLButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,11 +249,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D576CFBC2A64609C002BCB44 /* LoginView.swift in Sources */,
+				D576CFD72A646490002BCB44 /* Header.swift in Sources */,
 				D576CF9B2A645BAC002BCB44 /* MainView.swift in Sources */,
 				D576CFD22A6461B9002BCB44 /* ToDoListItemViewModel.swift in Sources */,
 				D576CFBA2A646093002BCB44 /* CreateItemView.swift in Sources */,
 				D576CFCE2A646197002BCB44 /* LoginViewModel.swift in Sources */,
 				D576CFB82A646089002BCB44 /* ToDoListView.swift in Sources */,
+				D576CFD92A647384002BCB44 /* TLButton.swift in Sources */,
 				D576CFC82A646173002BCB44 /* ProfileViewModel.swift in Sources */,
 				D576CFCC2A64618C002BCB44 /* CreateItemViewModel.swift in Sources */,
 				D576CFBE2A6460A8002BCB44 /* RegisterView.swift in Sources */,

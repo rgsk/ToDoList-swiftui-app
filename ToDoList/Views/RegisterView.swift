@@ -8,13 +8,61 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @StateObject var viewModel = RegisterViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Header(title: "Register", subtitle: "Start organizing todos", rotationAngle: -15, background: .orange)
+                .offset(y:-140)
+            
+            
+            Form {
+                TextField("Full Name", text: $viewModel.fullName)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                
+                TextField("Email Address", text: $viewModel.email)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled()
+                
+                SecureField("Password", text: $viewModel.password)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                
+                
+                TLButton(label: "Create Account", background: Color.green) {
+                    print("changed")
+                }
+            }
+            .offset(y:-40)
+            
+            
+            Spacer()
+        }
+    }
+    
+    
+}
+
+struct BackButtonForPreview: View {
+    var body: some View {
+        Button(action: {
+            // Back button tapped
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+                Text("Back")
+            }
+        }
     }
 }
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        VStack {
+            // button is not visible because it is below RegisterView
+            BackButtonForPreview()
+            RegisterView()
+        }
     }
 }

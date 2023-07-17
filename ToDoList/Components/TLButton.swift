@@ -47,7 +47,10 @@ struct TLButton_Previews: PreviewProvider {
             })) {
                 print("button tapped")
             }
-            
+        }
+        .previewDisplayName("loading")
+        
+        Form {
             TLButton(label: "Login", background: .pink, loading: Binding(get:{
                 return false
             }, set: {
@@ -55,7 +58,7 @@ struct TLButton_Previews: PreviewProvider {
             })) {
                 print("button tapped")
             }
-            
         }
+        .previewDisplayName("not loading")
     }
 }

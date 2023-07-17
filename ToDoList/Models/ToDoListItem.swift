@@ -13,8 +13,4 @@ struct ToDoListItem: Codable, Identifiable {
     let dueDate: TimeInterval
     let createdAt: TimeInterval
     var isComplete: Bool
-    
-    mutating func markComplete(_ value: Bool) {
-        isComplete = value
-    }
 }

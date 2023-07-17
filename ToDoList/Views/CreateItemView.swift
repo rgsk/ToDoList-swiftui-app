@@ -23,7 +23,7 @@ struct CreateItemView: View {
                     .textFieldStyle(DefaultTextFieldStyle())
                 DatePicker("Due Date", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
-                TLButton(label: "Save", background: .pink) {
+                TLButton(label: "Save", background: .pink, loading: $viewModel.loading) {
                     if viewModel.canSave {
                         viewModel.save()
                         onDismiss()

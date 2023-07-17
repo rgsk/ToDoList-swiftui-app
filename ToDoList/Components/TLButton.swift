@@ -10,7 +10,9 @@ import SwiftUI
 struct TLButton: View {
     let label: String
     let background: Color
+    @Binding var loading: Bool
     let action: () -> Void
+    
     
     var body: some View {
         Button{
@@ -18,13 +20,19 @@ struct TLButton: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(background)
-                Text(label)
-                    .foregroundColor(.white)
-                    .bold()
+                    .foregroundColor(loading ? .gray : background)
+                HStack(spacing: 10) {
+                    if loading {
+                        ProgressView()
+                    }
+                    
+                    Text(label)
+                        .foregroundColor(.white)
+                        .bold()
+                }
             }
-            
         }
+        .disabled(loading)
         .padding()
     }
 }
@@ -32,10 +40,22 @@ struct TLButton: View {
 struct TLButton_Previews: PreviewProvider {
     static var previews: some View {
         Form {
-            TLButton(label: "Login", background: .pink) {
+            TLButton(label: "Login", background: .pink, loading: Binding(get:{
+                return true
+            }, set: {
+                _ in
+            })) {
                 print("button tapped")
             }
-              
+            
+            TLButton(label: "Login", background: .pink, loading: Binding(get:{
+                return false
+            }, set: {
+                _ in
+            })) {
+                print("button tapped")
+            }
+            
         }
     }
 }

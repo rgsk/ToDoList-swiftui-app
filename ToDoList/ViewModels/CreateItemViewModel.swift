@@ -13,6 +13,8 @@ class CreateItemViewModel: ObservableObject {
     @Published var title = ""
     @Published var dueDate = Date()
     @Published var showAlert = false
+    @Published var loading = false
+    
     init() {
         
     }
@@ -34,11 +36,15 @@ class CreateItemViewModel: ObservableObject {
         )
         
         let db = Firestore.firestore()
+        loading = true
         db.collection("users")
             .document(uId)
             .collection("todos")
             .document(newId)
-            .setData(newItem.asDictionary())
+            .setData(newItem.asDictionary()) {
+                [weak self] _ in
+                self?.loading = false
+            }
     }
     var canSave: Bool {
         return !title.trimmingCharacters(in: .whitespaces).isEmpty

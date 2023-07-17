@@ -12,6 +12,7 @@ class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var errorMessage = ""
+    @Published var loading = false
     
     init() {
         
@@ -20,7 +21,14 @@ class LoginViewModel: ObservableObject {
         let errors = validate()
         if errors.count == 0 {
             errorMessage = ""
-            Auth.auth().signIn(withEmail: email, password: password)
+            loading = true
+            Auth.auth().signIn(withEmail: email, password: password) {
+                [weak self] _, error in
+                self?.loading = false
+                if error != nil {
+                    self?.errorMessage = error?.localizedDescription ?? ""
+                }
+            }
         } else {
             errorMessage = errors[0]
         }

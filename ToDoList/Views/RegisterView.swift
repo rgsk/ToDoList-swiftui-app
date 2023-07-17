@@ -34,7 +34,7 @@ struct RegisterView: View {
                         .foregroundColor(.red)
                 }
                 
-                TLButton(label: "Create Account", background: Color.green) {
+                TLButton(label: "Create Account", background: Color.green, loading: $viewModel.loading) {
                     viewModel.register()
                 }
             }

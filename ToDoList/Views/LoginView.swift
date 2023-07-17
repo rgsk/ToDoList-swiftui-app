@@ -32,7 +32,7 @@ struct LoginView: View {
                             .foregroundColor(.red)
                     }
                     
-                    TLButton(label: "Log In", background: Color.blue) {
+                    TLButton(label: "Log In", background: Color.blue, loading: $viewModel.loading) {
                         viewModel.login()
                     }
                 }

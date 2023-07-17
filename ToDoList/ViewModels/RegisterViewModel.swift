@@ -14,7 +14,7 @@ class RegisterViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var errorMessage = ""
-
+    @Published var loading = false
     init() {
         
     }
@@ -24,8 +24,10 @@ class RegisterViewModel: ObservableObject {
         let errors = validate()
         if errors.count == 0 {
             errorMessage = ""
+            loading = true
             Auth.auth().createUser(withEmail: email, password: password) {
                 [weak self] result, error in
+                self?.loading = false
                 guard let userId = result?.user.uid else {
                     return
                 }

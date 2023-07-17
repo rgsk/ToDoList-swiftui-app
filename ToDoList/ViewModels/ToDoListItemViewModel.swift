@@ -11,4 +11,8 @@ class ToDoListItemViewModel: ObservableObject {
     init() {
         
     }
+    
+    func toggleIsComplete(item: ToDoListItem) {
+        
+    }
 }

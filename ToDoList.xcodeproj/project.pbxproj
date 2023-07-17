@@ -34,6 +34,7 @@
 		D576CFD92A647384002BCB44 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFD82A647384002BCB44 /* TLButton.swift */; };
 		D576CFDE2A648770002BCB44 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFDD2A648770002BCB44 /* Validations.swift */; };
 		D576CFE02A648C3E002BCB44 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576CFDF2A648C3E002BCB44 /* Extensions.swift */; };
+		D5E726112A65CDE200DE4F30 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E726102A65CDE200DE4F30 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		D576CFD82A647384002BCB44 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		D576CFDD2A648770002BCB44 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		D576CFDF2A648C3E002BCB44 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D5E726102A65CDE200DE4F30 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				D576CF982A645BAC002BCB44 /* ToDoListApp.swift */,
 				D576CFDD2A648770002BCB44 /* Validations.swift */,
 				D576CFDF2A648C3E002BCB44 /* Extensions.swift */,
+				D5E726102A65CDE200DE4F30 /* Launch Screen.storyboard */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				D576CFA12A645BAC002BCB44 /* Preview Assets.xcassets in Resources */,
 				D576CF9D2A645BAC002BCB44 /* Assets.xcassets in Resources */,
+				D5E726112A65CDE200DE4F30 /* Launch Screen.storyboard in Resources */,
 				D576CFAF2A645D9F002BCB44 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +414,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -448,6 +453,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

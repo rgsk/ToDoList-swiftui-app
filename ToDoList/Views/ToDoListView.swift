@@ -19,10 +19,15 @@ struct ToDoListView: View {
             .navigationTitle("To Do List")
             .toolbar {
                 Button {
-                    
+                    viewModel.showCreateItemView = true
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $viewModel.showCreateItemView) {
+                CreateItemView (onDismiss: {
+                    viewModel.showCreateItemView = false
+                })
             }
         }
     }

@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct ToDoListItem: Codable, Identifiable {
+    let id: String
+    let title: String
+    let dueDate: TimeInterval
+    let createdAt: TimeInterval
+    var isComplete: Bool
+    
+    mutating func markComplete(_ value: Bool) {
+        isComplete = value
+    }
+}
